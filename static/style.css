@@ -27,6 +27,11 @@
   margin-bottom: 0.8rem;
 }
 
+.blog-post > a {
+  text-decoration: none;
+  color: black;
+}
+
 .post-date {
   font-size: 0.8rem;
   font-weight: bold;
