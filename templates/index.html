@@ -14,16 +14,13 @@
     </header>
 
     <section class="blog-posts">
+      {% for post in posts reversed %}
       <article class="blog-post">
-        <h2 class="post-title">Article Title</h2>
-        <p class="post-date">May 27, 2024</p>
-        <p class="post-text">Some text...</p>
+        <h2 class="post-title">{{post.title}}</h2>
+        <p class="post-date">{{post.created_at}}</p>
+        <div class="post-text">{{post.body|truncatewords:20}}</div>
       </article>
-      <article class="blog-post">
-        <h2 class="post-title">Article Title</h2>
-        <p class="post-date">May 28, 2024</p>
-        <p class="post-text">Some text...</p>
-      </article>
+      {% endfor %}
     </section>
   </body>
 </html>
